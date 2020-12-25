@@ -1,3 +1,7 @@
+"""
+https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
+"""
+
 def binary_search(alist, value):
     first = 0
     last = len(alist) - 1
