@@ -14,7 +14,26 @@ def binary_search(alist, value):
     return False
 
 
+def binary_search_rec(nums, target):
+    mid = len(nums) // 2
+    if not nums:
+        return False
+
+    if nums[mid] == target:
+        return True
+
+    if target < nums[mid]:
+        return binary_search_rec(nums[:mid], target)
+    else:
+        return binary_search_rec(nums[mid+1:], target)
+
+
 alist = [1, 2, 3, 4, 5, 6]
 assert binary_search(alist, 6) is True
 assert binary_search(alist, 1) is True
 assert binary_search(alist, 10) is False
+
+
+assert binary_search_rec(alist, 6) is True
+assert binary_search_rec(alist, 1) is True
+assert binary_search_rec(alist, 10) is False
