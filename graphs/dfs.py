@@ -5,6 +5,15 @@ def dfs(graph, start, visited):
             dfs(graph, node, visited)
     return visited
 
+
+def _dfs(graph, source, visited):
+    visited.append(source)
+    for node in graph[source]:
+        if node not in visited:
+            _dfs(graph, node, visited)
+    return visited
+
+
 def dfs_iter(graph, start):
     visited = [start]
     stack = [start]
