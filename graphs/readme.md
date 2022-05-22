@@ -1,5 +1,12 @@
 # Graphs algorithms, that you should know
 
+Algorithms for finding shortest path:
+1. Depth-First Search (DFS)
+2. Breadth-First Search (BFS)
+3. Bidirectional Search
+4. Dijkstra’s Algorithm
+5. Bellman-Ford Algorithm 
+
 ### Terminology:
 
 * [**Spanning Tree**](https://www.programiz.com/dsa/spanning-tree-and-minimum-spanning-tree#minimum-spanning) is a sub-graph of an undirected connected graph, 
