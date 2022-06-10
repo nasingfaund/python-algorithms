@@ -7,6 +7,8 @@ Algorithms for finding shortest path:
 4. Dijkstra’s Algorithm
 5. Bellman-Ford Algorithm 
 
+How to find connected components of a graph?
+
 ### Terminology:
 
 * [**Spanning Tree**](https://www.programiz.com/dsa/spanning-tree-and-minimum-spanning-tree#minimum-spanning) is a sub-graph of an undirected connected graph, 
