@@ -4,6 +4,8 @@
 # Sweep first element back and forth to insert it into every
 # position in each perm of the other elements
 
+# NOTE: does not work for n = 4!! 
+
 alist = [1, 2, 3]
 
 
