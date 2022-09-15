@@ -29,3 +29,32 @@ def bellman_ford(edges, start: str):
 
 
 print(bellman_ford(graph_edges, 'A'))
+
+
+# https://www.youtube.com/watch?v=-mOEd_3gTK0
+vertices = {'A', 'B', 'C', 'D', 'E'}
+edges = [('A', 'D', 8), ('A', 'C', 5), ('A', 'B', 4), ('B', 'C', -3), ('C', 'E', 4), ('D', 'E', 2), ('E', 'D', 1)]
+
+
+def bellman_ford2(edges, start: str):
+    distance = {v: float('inf') for v in vertices}
+    parent = {v: None for v in vertices}
+    distance[start] = 0
+
+    for _ in range(len(vertices) - 1):
+        for src, dst, w in edges:
+            if distance[src] + w < distance[dst]:
+                distance[dst] = distance[src] + w
+                parent[dst] = src
+    path = []
+    key = 'C'
+    while True:
+        if not key:
+            break
+        path.insert(0, key)
+        key = parent[key]
+
+    return path
+
+
+print(bellman_ford2(edges, 'A'))
